@@ -1,0 +1,36 @@
+/*everything in body*/
+body{
+    background-color: #b6d5e1;;
+}
+
+/*everything in the title/top header*/
+.topHeading{
+    text-align: center;
+}
+.container{
+    background-color: #e2eff1;
+    padding-bottom: 1%;
+    padding-top: 2%;
+    margin-bottom: 5%;
+    border-radius: 12px;
+}
+.title{
+    padding-top: 5%;
+    margin-bottom: 2%;
+}
+
+/*red star*/
+.red-mandatory-star{
+    color:rgb(255, 0, 0)
+}
+
+.bottomSpace{
+    padding-bottom: 2%;
+}
+
+/*changes width on big screens for container*/
+@media (min-width: 1000px) {
+    .container{
+        max-width: 800px;
+    }
+}
