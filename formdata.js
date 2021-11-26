@@ -20,7 +20,7 @@ function submittedForm(){
     }
     */
     
-    sessionStorage.setItem("lastNameSaved", "cheese");
+    //sessionStorage.setItem("lastNameSaved", "cheese");
     /*
     sessionStorage.setItem("firstNameSaved", firstNameChecker);
     sessionStorage.setItem("titleSaved", titleNameChecker);
@@ -137,7 +137,7 @@ function validName(lName, fName){
 
 function loadData(){
     window.addEventListener("load", () => {
-        document.getElementById("lastNameResult").placeholder= sessionStorage.getItem("lastNameSaved");
+        //document.getElementById("lastNameResult").placeholder = sessionStorage.getItem("lastNameSaved");
         /*
         document.getElementById("firstNameResult").placeholder= sessionStorage.getItem("firstNameSaved");
         document.getElementById("titleResult").placeholder= sessionStorage.getItem("titleSaved");
