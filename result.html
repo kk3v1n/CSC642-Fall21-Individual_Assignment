@@ -4,13 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sample Form</title>
-
+    <title>Results Page</title>
+    
     <!--JS Linking-->
-    <script type="text/javascript" src="formdata.js"></script>
-
-    <!-- Personal CSS -->
-    <link rel="stylesheet" href="" /> 
 
     <!-- Bootstrap CSS -->
     <link
@@ -21,177 +17,109 @@
     />
 
     <!-- Personal CSS -->
-    <link rel="stylesheet" href="style.css" /> 
-
+    <link rel="stylesheet" href="style.css" />
+    
     <!--Favicon-->
     <link rel="icon" href="google-forms.png" />
-
 </head>
 
 <body>
-    <h2 class="topHeading title">CSC 642 848 Fall 2021 Individual Assignment Kevin Karmacharya</h2>
+
+    <h2 class="topHeading title">Results verification page Kevin Karmacharya</h2>
 
     <div class="container">
-        <h1 class="topHeading bottomSpace">Data Survey Form</h1>
-
-        <form class="form-horizontal" method="get" action="result.html" name="myform1">
+        
+        <form class="form-horizontal" method="post" action="result.html" name="myform1">
 
           <div class="form-group">
-            <label class="control-label col-sm-2" for="inputLastName">Last Name <span class="red-mandatory-star">*</span></label>
+            <label class="control-label col-sm-2" for="lastNameResult">Last Name <span class="red-mandatory-star">*</span></label>
             <div class="col-sm-5">
-              <input type="text" class="form-control" id="inputLastName" maxlength="40" name="lastName1" placeholder="Last Name" required>
+              <input type="text" class="form-control" id="lastNameResult" placeholder="No data entered..." readonly>
             </div>
           </div>
 
           <div class="form-group">
-            <label class="control-label col-sm-2" for="inputFirstName">First Name <span class="red-mandatory-star">*</span></label>
+            <label class="control-label col-sm-2" for="firstNameResult">First Name <span class="red-mandatory-star">*</span></label>
             <div class="col-sm-5">
-                <input type="text" class="form-control" id="inputFirstName" maxlength="40" name="firstName1" placeholder="First Name" required>
+                <input type="text" class="form-control" id="firstNameResult" placeholder="No data entered..." readonly>
             </div>
           </div>
 
           <div class="form-group">
-            <label class="control-label col-sm-4" for="inputTitle" class="movedown">Your Preferred Title <span class="red-mandatory-star">*</span></label>
+            <label class="control-label col-sm-2" for="titleResult" class="movedown">Your Preferred Title <span class="red-mandatory-star">*</span></label>
             <div class="col-sm-2">
-                <select class="custom-select" id="inputTitle" name="inputTitle1" required>
-                    <option value="None">None</option>
-                    <option value="Student">Student</option>
-                    <option value="Professor">Professor</option>
-                    <option value="Staff">Staff</option>
-                    <option value="Retired">Retired</option>
-                </select>
+                <input class="form-control" type="text" id="titleResult" placeholder="None" readonly>
             </div>
           </div>
 
           <div class="form-group row">
             <div class="col-sm-2">
               <label class="control-label"for="feetResult">Feet</label>
-              <input class="form-control" type="text" id="feetResult" maxlength="2" pattern="[0-9]" name="inputFeet1" placeholder="ft">
+              <input class="form-control" type="text" id="feetResult" placeholder="" readonly>
             </div>
             <div class="col-sm-2">
               <label class="control-label " for="inchesResult">Inches</label>
-              <input class="form-control" type="text" id="inchesResult" maxlength="5" pattern="[0-9]" name="inputInches1" placeholder="in">
+              <input class="form-control" type="text" id="inchesResult" placeholder="" readonly>
             </div>
           </div>
 
           <div class="form-group">
-            <label class="control-label col-sm-4" for="inputPhone">Phone Number</label>
+            <label class="control-label col-sm-2" for="phoneResult">Phone Number</label>
             <div class="col-sm-3">
-                <input type="text" class="form-control" id="inputPhone" name="inputPhone1" placeholder="xxx-xxx-xxxx" pattern="[0-9]{10}" maxlength="10">
+                <input class="form-control" type="text" id="phoneResult" placeholder="No data entered..." readonly>
             </div>
           </div>
 
           <div class="form-group">
-            <label class="control-label col-sm-2" for="inputAddress">Address <span class="red-mandatory-star">*</span></label>
+            <label class="control-label col-sm-2" for="addressResult">Address <span class="red-mandatory-star">*</span></label>
             <div class="col-sm-5">
-                <input type="text" class="form-control" id="inputAddress" name="inputAddress1" placeholder="Street Address or P.O Box" maxlength="40" required>
+                <input class="form-control " type="text" id="addressResult" placeholder="No data entered..." readonly>
             </div>
           </div>
           <div class="form-group">
-            <label class="control-label col-sm-2" for="inputCity">City <span class="red-mandatory-star">*</span></label>
+            <label class="control-label col-sm-2" for="cityResult">City <span class="red-mandatory-star">*</span></label>
             <div class="col-sm-5">
-                <input type="text" class="form-control" id="inputCity" name="inputCity1" placeholder="" maxlength="40" required>
+                <input class="form-control" type="text" id="cityResult" placeholder="No data entered..." readonly>
             </div>
           </div>
           <div class="form-group">
-            <label class="control-label col-sm-2" for="inputState">State <span class="red-mandatory-star">*</span></label>
+            <label class="control-label col-sm-2" for="stateResult">State <span class="red-mandatory-star">*</span></label>
             <div class="col-sm-5">
-              <input type="text" class="form-control" id="inputState" name="inputState1" placeholder="" maxlength="40" required>
+              <input class="form-control" type="text" id="stateResult" placeholder="No data entered..." readonly>
             </div>
           </div>
           <div class="form-group">
-            <label class="control-label col-sm-2" for="inputZip">Zip Code <span class="red-mandatory-star">*</span></label>
+            <label class="control-label col-sm-2" for="zipResult">Zip Code <span class="red-mandatory-star">*</span></label>
             <div class="col-sm-2">
-                <input type="number" class="form-control" id="inputZip" name="inputZip1"  placeholder="" maxlength="5" required>
+                <input class="form-control" type="text" id="zipResult" placeholder="No data entered..." readonly>
             </div>
           </div>
 
 
-
-
-
           <div class="form-group">
-
-            <div class="col-sm-offset-2 col-sm-10">
-                <div class="checkbox">
-                  <label for="checkbox1"><input type="checkbox" name="inlineCheckbox11" id="checkbox1" value="Email">  Email</label>
-                </div>
-            </div>
-            <div class="col-sm-offset-2 col-sm-10">
-                <div class="checkbox">
-                  <label for="checkbox2"><input type="checkbox" name="inlineCheckbox22" id="checkbox2" value="Phone">  Phone</label>
-                </div>
-            </div>
-            <div class="col-sm-offset-2 col-sm-10">
-                <div class="checkbox">
-                  <label for="checkbox3"><input type="checkbox" name="inlineCheckbox33" id="checkbox3" value="Facebook">  Facebook</label>
-                </div>
-            </div>
-            <div class="col-sm-offset-2 col-sm-10">
-                <div class="checkbox">
-                  <label for="checkbox4"><input type="checkbox" name="inlineCheckbox44" id="checkbox4" value="Twitter">  Twitter</label>
-                </div>
-            </div>
-            <div class="col-sm-offset-2 col-sm-10">
-                <div class="checkbox">
-                  <label for="checkbox5"><input type="checkbox" name="inlineCheckbox55" id="checkbox5" value="Surface Mail">  Surface Mail</label>
-                </div>
-            </div>
-            <div class="col-sm-offset-2 col-sm-10">
-                <div class="checkbox">
-                  <label for="checkbox6"><input type="checkbox" name="inlineCheckbox66" id="checkbox6" value="Personal Visit">  Personal Visit</label>
-                </div>
+            <label class="control-label col-sm-5" for="servicesResult">Services You Requested</label>
+            <div class="col-sm-6">
+                <input class="form-control" type="text" id="servicesResult" placeholder="You did not ask for any services" readonly>
             </div>
           </div>
 
 
 
           <div class="form-group">
-            <label class="control-label col-sm-5" for="inputBudget">Your Monthly Budget for Services</label>
+            <label class="control-label col-sm-5" for="budgetResult">Your Monthly Budget for Services</label>
             <div class="col-sm-3">
-                <select class="custom-select dropSize1" id="inputBudget" name="inputBudget1">
-                    <option value= "N/A" selected>Select One</option>
-                    <option value="less than $50">less than $50</option>
-                    <option value="between $50 and $100">between $50 and $100</option>
-                    <option value="above $100">above $100</option>
-                </select>
+                <input class="form-control" type="text" id="budgetResult" placeholder="No Preference" readonly>
             </div>
           </div>
 
           <div class="form-group">
-            <label class="control-label col-sm-2" for="inputEmail4">Email <span class="red-mandatory-star">*</span></label>
+            <label class="control-label col-sm-2" for="emailResult">Email <span class="red-mandatory-star">*</span></label>
             <div class="col-sm-5">
-                <input type="email" class="form-control nameSize" id="inputEmail4" name="inputEmail1" placeholder="your@email.com" required>
-            </div>
-          </div>
-
-          <div class="form-group">        
-            <div class="col-sm-offset-2 col-sm-10">
-              <div class="checkbox">
-                <label><input type="checkbox" name="remember" required> Are you a robot? </label>
-                <p>Check the box above if you aren't a robot</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="form-group">        
-            <div class="col-sm-offset-2 col-sm-10">
-              <div class="checkbox">
-                <label><input type="checkbox" name="remember" required> <span class="red-mandatory-star">*</span> I agree to <a href="">terms and conditions</a>.</label>
-              </div>
-            </div>
-          </div>
-
-          <div class="form-group">        
-            <div class="col-sm-offset-2 col-sm-10">
-              <button type="submit" class="btn btn-primary" id="submitButton" onclick="submittedForm()">Submit</button>
+                <input class="form-control" type="text" id="emailResult" placeholder="No data entered..." readonly>
             </div>
           </div>
 
         </form>
       </div>
-
-
-
 </body>
 </html>
