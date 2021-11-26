@@ -4,12 +4,17 @@ function submittedForm(){
     var titleNameChecker = document.myform1.inputTitle1.value
     var feetChecker = document.myform1.inputFeet1.value
     var inchesChecker = document.myform1.inputInches1.value
-    var phoneChecker = gettingPNumber()
+    var phoneChecker = document.myform1.inputPhone1.value
+
+    //var phoneChecker = gettingPNumber()
     var addressChecker = document.myform1.inputAddress1.value
     var cityChecker = document.myform1.inputCity1.value
     var stateChecker = document.myform1.inputState1.value
     var zipChecker = document.myform1.inputZip1.value
-    var servicesChecker = gettingChecked()
+
+    var servicesChecker = document.myform1.inputZip1.value
+
+    //var servicesChecker = gettingChecked()
     var budgetChecker = document.myform1.inputBudget1.value
     var emailChecker = document.myform1.inputEmail1.value
 
@@ -48,6 +53,7 @@ function zipCheck(zipCode){
 
 /*adding the dashes to the phone number */
 
+/*
 function gettingPNumber(){
     var finalPNumber = ""
     var userPNumber = document.myform1.inputPhone1.value
@@ -57,11 +63,11 @@ function gettingPNumber(){
     finalPNumber = finalPNumber.concat("("+part1 + ") - " + part2 + " - "+part3)
     return finalPNumber;
 }
-
+*/
 
 /* checking services user wants */
 
-
+/*
 function gettingChecked(){
     var checkedServices = ""
     var box1 = document.getElementById("checkbox1");
@@ -110,6 +116,7 @@ function gettingChecked(){
     }
     return checkedServices;
 }
+*/
 
 
 /*
