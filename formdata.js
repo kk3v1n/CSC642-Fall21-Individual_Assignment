@@ -20,7 +20,8 @@ function submittedForm(){
     }
     */
     
-    sessionStorage.setItem("lastNameSaved", lastNameChecker);
+    sessionStorage.setItem("lastNameSaved", "cheese");
+    /*
     sessionStorage.setItem("firstNameSaved", firstNameChecker);
     sessionStorage.setItem("titleSaved", titleNameChecker);
     sessionStorage.setItem("feetSaved", feetChecker);
@@ -33,6 +34,7 @@ function submittedForm(){
     sessionStorage.setItem("servicesSaved", servicesChecker);
     sessionStorage.setItem("budgetSaved", budgetChecker);
     sessionStorage.setItem("emailSaved", emailChecker);
+    */
 
 }
 
@@ -46,6 +48,7 @@ function zipCheck(zipCode){
 */
 
 /*adding the dashes to the phone number */
+/*
 function gettingPNumber(){
     var finalPNumber = ""
     var userPNumber = document.myform1.inputPhone1.value
@@ -55,9 +58,11 @@ function gettingPNumber(){
     finalPNumber = finalPNumber.concat("("+part1 + ") - " + part2 + " - "+part3)
     return finalPNumber;
 }
-
+*/
 
 /* checking services user wants */
+
+/*
 function gettingChecked(){
     var checkedServices = ""
     var box1 = document.getElementById("checkbox1");
@@ -106,6 +111,7 @@ function gettingChecked(){
     }
     return checkedServices;
 }
+*/
 
 /*
 function validName(lName, fName){
@@ -132,6 +138,7 @@ function validName(lName, fName){
 function loadData(){
     window.addEventListener("load", () => {
         document.getElementById("lastNameResult").placeholder= sessionStorage.getItem("lastNameSaved");
+        /*
         document.getElementById("firstNameResult").placeholder= sessionStorage.getItem("firstNameSaved");
         document.getElementById("titleResult").placeholder= sessionStorage.getItem("titleSaved");
         document.getElementById("feetResult").placeholder= sessionStorage.getItem("feetSaved");
@@ -144,6 +151,7 @@ function loadData(){
         document.getElementById("servicesResult").placeholder= sessionStorage.getItem("servicesSaved");
         document.getElementById("budgetResult").placeholder= sessionStorage.getItem("budgetSaved");
         document.getElementById("emailResult").placeholder= sessionStorage.getItem("emailSaved");
+        */
     })
 }
 
