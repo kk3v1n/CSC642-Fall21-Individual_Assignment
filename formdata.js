@@ -11,10 +11,8 @@ function submittedForm(){
     var cityChecker = document.myform1.inputCity1.value
     var stateChecker = document.myform1.inputState1.value
     var zipChecker = document.myform1.inputZip1.value
+    var servicesChecker = checked();
 
-    var servicesChecker = document.myform1.inputZip1.value
-
-    //var servicesChecker = gettingChecked()
     var budgetChecker = document.myform1.inputBudget1.value
     var emailChecker = document.myform1.inputEmail1.value
 
@@ -42,6 +40,51 @@ function submittedForm(){
 
 }
 
+
+/* checking services user wants */
+
+var checkedServices = ""
+function checked(){
+    var box1 = document.getElementById("checkbox1");
+    var box2 = document.getElementById("checkbox2");
+    var box3 = document.getElementById("checkbox3");
+    var box4 = document.getElementById("checkbox4");
+    var box5 = document.getElementById("checkbox5");
+    var box6 = document.getElementById("checkbox6");
+    if(box1.checked == true && checkedServices == ""){
+        checkedServices = checkedServices.concat(box1.value)
+    }
+    if(box2.checked == true && checkedServices == ""){
+        checkedServices = checkedServices.concat(box2.value);
+    }else if(box2.checked == true && checkedServices != ""){
+        checkedServices = checkedServices.concat(", "+box2.value);
+    }
+    if(box3.checked == true && checkedServices == ""){
+        checkedServices = checkedServices.concat(box3.value)
+    }else if(box3.checked == true && checkedServices != ""){
+        checkedServices = checkedServices.concat(", "+box3.value);
+    }
+    if(box4.checked == true && checkedServices == ""){
+        checkedServices = checkedServices.concat(box4.value);
+    }else if(box4.checked == true && checkedServices != ""){
+        checkedServices = checkedServices.concat(", "+box4.value);
+    }
+    if(box5.checked == true && checkedServices == ""){
+        checkedServices = checkedServices.concat(box5.value);
+    }else if(box5.checked == true && checkedServices != ""){
+        checkedServices = checkedServices.concat(", "+box5.value);
+    }
+    if(box6.checked == true && checkedServices == ""){
+        checkedServices = checkedServices.concat(box6.value)
+    }else if(box6.checked == true && checkedServices != ""){
+        checkedServices = checkedServices.concat(", "+box6.value);
+    }
+    if(checkedServices == ""){
+        checkedServices = "N/A"
+    }
+    return checkedServices;
+}
+
 //making zip only have 5 numbers
 /*
 function zipCheck(zipCode){
@@ -65,59 +108,6 @@ function gettingPNumber(){
 }
 */
 
-/* checking services user wants */
-
-/*
-function gettingChecked(){
-    var checkedServices = ""
-    var box1 = document.getElementById("checkbox1");
-    var box2 = document.getElementById("checkbox2");
-    var box3 = document.getElementById("checkbox3");
-    var box4 = document.getElementById("checkbox4");
-    var box5 = document.getElementById("checkbox5");
-    var box6 = document.getElementById("checkbox6");
-
-    if(box1.checked == true && checkedServices == ""){
-        checkedServices = checkedServices.concat(box1.value)
-    }
-
-    if(box2.checked == true && checkedServices == ""){
-        checkedServices = checkedServices.concat(box2.value);
-    }else if(box2.checked == true && checkedServices != ""){
-        checkedServices = checkedServices.concat(", "+box2.value);
-    }
-
-    if(box3.checked == true && checkedServices == ""){
-        checkedServices = checkedServices.concat(box3.value)
-    }else if(box3.checked == true && checkedServices != ""){
-        checkedServices = checkedServices.concat(", "+box3.value);
-    }
-
-    if(box4.checked == true && checkedServices == ""){
-        checkedServices = checkedServices.concat(box4.value);
-    }else if(box4.checked == true && checkedServices != ""){
-        checkedServices = checkedServices.concat(", "+box4.value);
-    }
-
-    if(box5.checked == true && checkedServices == ""){
-        checkedServices = checkedServices.concat(box5.value);
-    }else if(box5.checked == true && checkedServices != ""){
-        checkedServices = checkedServices.concat(", "+box5.value);
-    }
-
-    if(box6.checked == true && checkedServices == ""){
-        checkedServices = checkedServices.concat(box6.value)
-    }else if(box6.checked == true && checkedServices != ""){
-        checkedServices = checkedServices.concat(", "+box6.value);
-    }
-
-    if(checkedServices == ""){
-        checkedServices = "N/A"
-    }
-    return checkedServices;
-}
-*/
-
 
 /*
 function validName(lName, fName){
@@ -136,7 +126,6 @@ function validName(lName, fName){
     }
     document.getElementById("inputLastName").style.border = "solid";
     document.getElementById("inputFirstName").style.border = "solid";
-
     return true;
 }
 */
@@ -160,6 +149,3 @@ function loadData(){
         
     })
 }
-
-
-
