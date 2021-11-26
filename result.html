@@ -31,37 +31,42 @@
 
     <div class="container">
         
-        <form class="form-horizontal" method="post" action="result.html" name="myform1">
+        <form class="form-horizontal" action="result.html" name="myform1">
 
           <div class="form-group">
-            <label class="control-label col-sm-2" for="lastNameResult">Last Name <span class="red-mandatory-star">*</span></label>
+            <label class="control-label col-sm-2" for="lastNameResult" style="font-size: medium; font-weight: bold;">Last Name <span class="red-mandatory-star">*</span></label>
             <div class="col-sm-5">
               <input type="text" class="form-control" id="lastNameResult" placeholder="No data entered..." readonly>
             </div>
           </div>
 
           <div class="form-group">
-            <label class="control-label col-sm-2" for="firstNameResult">First Name <span class="red-mandatory-star">*</span></label>
+            <label class="control-label col-sm-2" for="firstNameResult" style="font-size: medium; font-weight: bold;">First Name <span class="red-mandatory-star">*</span></label>
             <div class="col-sm-5">
                 <input type="text" class="form-control" id="firstNameResult" placeholder="No data entered..." readonly>
             </div>
           </div>
 
           <div class="form-group">
-            <label class="control-label col-sm-5" for="titleResult" class="movedown">Your Preferred Title <span class="red-mandatory-star">*</span></label>
-            <div class="col-sm-2">
+            <label class="control-label col-sm-5" for="titleResult" class="movedown" style="font-size: medium; font-weight: bold;">Your Preferred Title <span class="red-mandatory-star">*</span></label>
+            <div class="col-sm-3">
                 <input class="form-control" type="text" id="titleResult" placeholder="None" readonly>
             </div>
           </div>
 
-          <div class="form-group row">
-            <div class="col-sm-2">
-              <label class="control-label"for="feetResult">Feet</label>
-              <input class="form-control" type="text" id="feetResult" placeholder="" readonly>
-            </div>
-            <div class="col-sm-2">
-              <label class="control-label " for="inchesResult">Inches</label>
-              <input class="form-control" type="text" id="inchesResult" placeholder="" readonly>
+          <div class= "form-group pushHeight">
+            <p >Your Height</p>
+            <div class="row heightP">
+              <div class="col-sm-2">
+                <label class="control-label"for="feetResult"></label>
+                <input class="form-control" type="text" id="feetResult"placeholder=""readonly>
+                <p>Feet</p>
+              </div>
+              <div class="col-sm-2">
+                <label class="control-label " for="inchesResult"></label>
+                <input class="form-control" type="text" id="inchesResult" placeholder="" readonly>
+                <p>Inches</p>
+              </div>
             </div>
           </div>
 
@@ -73,25 +78,25 @@
           </div>
 
           <div class="form-group">
-            <label class="control-label col-sm-2" for="addressResult">Address <span class="red-mandatory-star">*</span></label>
+            <label class="control-label col-sm-2" for="addressResult" style="font-size: medium; font-weight: bold;">Address <span class="red-mandatory-star">*</span></label>
             <div class="col-sm-5">
                 <input class="form-control " type="text" id="addressResult" placeholder="No data entered..." readonly>
             </div>
           </div>
           <div class="form-group">
-            <label class="control-label col-sm-2" for="cityResult">City <span class="red-mandatory-star">*</span></label>
+            <label class="control-label col-sm-2" for="cityResult" style="font-size: medium; font-weight: bold;">City <span class="red-mandatory-star">*</span></label>
             <div class="col-sm-5">
                 <input class="form-control" type="text" id="cityResult" placeholder="No data entered..." readonly>
             </div>
           </div>
           <div class="form-group">
-            <label class="control-label col-sm-2" for="stateResult">State <span class="red-mandatory-star">*</span></label>
+            <label class="control-label col-sm-2" for="stateResult" style="font-size: medium; font-weight: bold;">State <span class="red-mandatory-star">*</span></label>
             <div class="col-sm-5">
               <input class="form-control" type="text" id="stateResult" placeholder="No data entered..." readonly>
             </div>
           </div>
           <div class="form-group">
-            <label class="control-label col-sm-2" for="zipResult">Zip Code <span class="red-mandatory-star">*</span></label>
+            <label class="control-label col-sm-2" for="zipResult" style="font-size: medium; font-weight: bold;">Zip Code <span class="red-mandatory-star">*</span></label>
             <div class="col-sm-2">
                 <input class="form-control" type="text" id="zipResult" placeholder="No data entered..." readonly>
             </div>
@@ -99,8 +104,8 @@
 
 
           <div class="form-group">
-            <label class="control-label col-sm-5" for="servicesResult">Services You Requested</label>
-            <div class="col-sm-6">
+            <label class="control-label col-sm-5" for="servicesResult" style="text-decoration: underline;">Services You Requested</label>
+            <div class="col-sm-8">
                 <input class="form-control" type="text" id="servicesResult" placeholder="You did not ask for any services" readonly>
             </div>
           </div>
@@ -108,14 +113,14 @@
 
 
           <div class="form-group">
-            <label class="control-label col-sm-5" for="budgetResult">Your Monthly Budget for Services</label>
-            <div class="col-sm-3">
+            <label class="control-label col-sm-5" for="budgetResult" style="text-decoration: underline;">Your Monthly Budget for Services</label>
+            <div class="col-sm-4">
                 <input class="form-control" type="text" id="budgetResult" placeholder="No Preference" readonly>
             </div>
           </div>
 
           <div class="form-group">
-            <label class="control-label col-sm-2" for="emailResult">Email <span class="red-mandatory-star">*</span></label>
+            <label class="control-label col-sm-2" for="emailResult" style="font-size: medium; font-weight: bold;">Email <span class="red-mandatory-star">*</span></label>
             <div class="col-sm-5">
                 <input class="form-control" type="text" id="emailResult" placeholder="No data entered..." readonly>
             </div>

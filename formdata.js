@@ -1,27 +1,20 @@
 function submittedForm(){
-    var lastNameChecker = document.myform1.lastName1.value
-    var firstNameChecker = document.myform1.firstName1.value
-    var titleNameChecker = document.myform1.inputTitle1.value
-    var feetChecker = document.myform1.inputFeet1.value
-    var inchesChecker = document.myform1.inputInches1.value
-    var phoneChecker = document.myform1.inputPhone1.value
+    var lastNameChecker = document.myform1.lastName1.value;
+    var firstNameChecker = document.myform1.firstName1.value;
+    var titleNameChecker = document.myform1.inputTitle1.value;
+    var feetChecker = document.myform1.inputFeet1.value;
+    var inchesChecker = document.myform1.inputInches1.value;
+    var phoneChecker = document.myform1.inputPhone1.value;
 
     //var phoneChecker = gettingPNumber()
-    var addressChecker = document.myform1.inputAddress1.value
-    var cityChecker = document.myform1.inputCity1.value
-    var stateChecker = document.myform1.inputState1.value
-    var zipChecker = document.myform1.inputZip1.value
+    var addressChecker = document.myform1.inputAddress1.value;
+    var cityChecker = document.myform1.inputCity1.value;
+    var stateChecker = document.myform1.inputState1.value;
+    var zipChecker = document.myform1.inputZip1.value;
     var servicesChecker = checked();
 
-    var budgetChecker = document.myform1.inputBudget1.value
-    var emailChecker = document.myform1.inputEmail1.value
-
-    /*
-    if(!validName(lastNameChecker, firstNameChecker)){
-        sessionStorage.clear();
-        return false;
-    }
-    */
+    var budgetChecker = document.myform1.inputBudget1.value;
+    var emailChecker = document.myform1.inputEmail1.value;
     
     sessionStorage.setItem("lastNameSaved", lastNameChecker);
     sessionStorage.setItem("firstNameSaved", firstNameChecker);
@@ -43,8 +36,8 @@ function submittedForm(){
 
 /* checking services user wants */
 
-var checkedServices = ""
 function checked(){
+    var checkedServices = ""
     var box1 = document.getElementById("checkbox1");
     var box2 = document.getElementById("checkbox2");
     var box3 = document.getElementById("checkbox3");
