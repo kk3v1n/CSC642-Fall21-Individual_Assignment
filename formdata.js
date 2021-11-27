@@ -6,7 +6,7 @@ function submittedForm(){
     var inchesChecker = document.myform1.inputInches1.value;
     var phoneChecker = document.myform1.inputPhone1.value;
 
-    //var phoneChecker = gettingPNumber()
+    var phoneChecker = gettingPhoneNumber()
     var addressChecker = document.myform1.inputAddress1.value;
     var cityChecker = document.myform1.inputCity1.value;
     var stateChecker = document.myform1.inputState1.value;
@@ -29,8 +29,6 @@ function submittedForm(){
     sessionStorage.setItem("servicesSaved", servicesChecker);
     sessionStorage.setItem("budgetSaved", budgetChecker);
     sessionStorage.setItem("emailSaved", emailChecker);
-    
-
 }
 
 
@@ -78,19 +76,9 @@ function checked(){
     return checkedServices;
 }
 
-//making zip only have 5 numbers
-/*
-function zipCheck(zipCode){
-    if (zipCode.value.length > zipCode.maxLength){
-        zipCode.value = zipCode.value.slice(0, zipCode.maxLength);
-    }
-}
-*/
-
 /*adding the dashes to the phone number */
 
-/*
-function gettingPNumber(){
+function gettingPhoneNumber(){
     var finalPNumber = ""
     var userPNumber = document.myform1.inputPhone1.value
     var part1 = userPNumber.slice(0,3);
@@ -99,29 +87,6 @@ function gettingPNumber(){
     finalPNumber = finalPNumber.concat("("+part1 + ") - " + part2 + " - "+part3)
     return finalPNumber;
 }
-*/
-
-
-/*
-function validName(lName, fName){
-    if(lName.length < 1 && fName.length < 1 ){
-        document.getElementById("inputLastName").style.border = "solid Red";
-        document.getElementById("inputFirstName").style.border = "solid Red";
-        return false;
-    }else if(lName.length < 1){
-        document.getElementById("inputLastName").style.border = "solid Red";
-        document.getElementById("inputFirstName").style.border = "solid";
-        return false;
-    }else if(fName.length < 1){
-        document.getElementById("inputFirstName").style.border = " solid Red";
-        document.getElementById("inputLastName").style.border = "solid";
-        return false;
-    }
-    document.getElementById("inputLastName").style.border = "solid";
-    document.getElementById("inputFirstName").style.border = "solid";
-    return true;
-}
-*/
 
 function loadData(){
     window.addEventListener("load", () => {
