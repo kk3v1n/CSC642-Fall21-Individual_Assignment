@@ -109,8 +109,9 @@
           <div class="form-group">
             <label class="control-label col-sm-2" for="inputZip" style="font-size: medium; font-weight: bold;">Zip Code <span class="red-mandatory-star">*</span></label>
             <div class="col-sm-2">
-                <input type="number" class="form-control" id="inputZip" name="inputZip1"  placeholder="" maxlength="5" required>
-            </div>
+                <input type="text" class="form-control" id="inputZip" name="inputZip1"  pattern="[0-9]{5}" placeholder="" maxlength="5" required>
+              </div>
+              <p class="pushHeight">(Enter 5 Digits) </p>
           </div>
 
 

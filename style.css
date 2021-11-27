@@ -38,7 +38,7 @@ body{
 /*changes width on big screens for height*/
 @media (min-width: 10px) {
     .pushHeight{
-        margin-left: 20px;
+        margin-left: 15px;
     }
 }
 
