@@ -104,6 +104,34 @@ function loadData(){
         document.getElementById("servicesResult").placeholder= sessionStorage.getItem("servicesSaved");
         document.getElementById("budgetResult").placeholder= sessionStorage.getItem("budgetSaved");
         document.getElementById("emailResult").placeholder= sessionStorage.getItem("emailSaved");
-        
+
+
+        //USING MAPS FROM GOOGLE MAPS API AND GEOCODING API
+        initmap();
+        function initmap(){
+        const address= document.getElementById("addressResult").placeholder + " " + document.getElementById("cityResult").placeholder+ " " + document.getElementById("stateResult").placeholder + " " +document.getElementById("zipResult").placeholder
+            
+        axios.get("https://maps.googleapis.com/maps/api/geocode/json",{
+            params:{
+                address: address,
+                key: "AIzaSyBaQVcEQHLYOICXjaInyItZV7jaj1NNImM"
+            }
+        }).then(function (response) {
+            //console.log(response);
+            var location = response.data.results[0].geometry.location;
+            const map = new google.maps.Map(document.getElementById("map"), {
+                zoom: 16,
+                center: location,
+            });
+            
+            const marker = new google.maps.Marker({
+                position: location,
+                map: map,
+            });
+            
+        }).catch(function(error){
+                console.log(error);
+            })
+        }
     })
 }

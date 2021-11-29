@@ -85,3 +85,9 @@ body{
 	}
 
 #CaptchaInput { border: #007eb0 2px solid; margin: 3px 0px 1px 0px; width: 98%; }
+
+/*Designing Map to Show*/
+#map{
+	height: 300px;
+	width: 100%;
+}
